@@ -1,0 +1,168 @@
+{
+  "version": "news-standalone-method-v4",
+  "primary": {
+    "backend": "gemini-api",
+    "model": "gemini-3.1-pro-preview",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent",
+    "secret_ref": "OPENWEB_NEWS_GEMINI_API_KEY",
+    "aliases": [],
+    "settings": {
+      "temperature": 1,
+      "maxOutputTokens": 16384,
+      "thinkingConfig": {
+        "thinkingLevel": "LOW"
+      }
+    },
+    "accounting_rates": {
+      "input_per_million_usd": "4",
+      "output_per_million_usd": "18",
+      "basis": "Conservative higher-context planning rates, not an invoice guarantee; admission uses a UTF-8 byte estimate plus overhead.",
+      "checked_at": "2026-10-28",
+      "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+    }
+  },
+  "decoder_profile": "news-canonical-full-field-date-replay-v1",
+  "schema_profile": "news-own-fact-support-date-schema-v3",
+  "review_states": [
+    "conforming_numeric",
+    "nonconforming_numeric",
+    "valid_unknown",
+    "invalid",
+    "unjudged"
+  ],
+  "max_positions_per_occurrence": 3,
+  "cutoffs": [
+    3,
+    5,
+    10
+  ],
+  "pool_depth": 10,
+  "native_date_semantics": {
+    "brave-news": {
+      "age": [
+        "unclear",
+        "unspecified"
+      ],
+      "page_age": [
+        "unclear",
+        "unspecified"
+      ],
+      "page_fetched": [
+        "crawl",
+        "provider_reported"
+      ],
+      "fetched_content_timestamp": [
+        "crawl",
+        "provider_reported"
+      ]
+    },
+    "brave-web": {
+      "age": [
+        "unclear",
+        "unspecified"
+      ],
+      "page_age": [
+        "unclear",
+        "unspecified"
+      ],
+      "article.date": [
+        "unclear",
+        "unspecified"
+      ],
+      "page_fetched": [
+        "crawl",
+        "provider_reported"
+      ]
+    },
+    "exa-highlights": {
+      "publishedDate": [
+        "first_publication",
+        "documented_estimated"
+      ]
+    },
+    "firecrawl-news": {
+      "date": [
+        "unclear",
+        "unspecified"
+      ]
+    },
+    "firecrawl-web": {
+      "date": [
+        "unclear",
+        "unspecified"
+      ]
+    },
+    "parallel-advanced": {
+      "publish_date": [
+        "publication_unspecified",
+        "unspecified"
+      ]
+    },
+    "perplexity-web": {
+      "date": [
+        "publication_unspecified",
+        "unspecified"
+      ],
+      "last_updated": [
+        "update",
+        "provider_reported"
+      ]
+    },
+    "searlo-news": {
+      "date": [
+        "unclear",
+        "unspecified"
+      ],
+      "news.publishedDate": [
+        "unclear",
+        "unspecified"
+      ]
+    },
+    "searlo-web": {
+      "date": [
+        "unclear",
+        "unspecified"
+      ]
+    },
+    "tavily-news": {
+      "published_date": [
+        "unclear",
+        "documented_estimated"
+      ]
+    },
+    "valyu-search": {
+      "publication_date": [
+        "publication_unspecified",
+        "unspecified"
+      ],
+      "crawl_date": [
+        "unclear",
+        "unspecified"
+      ]
+    },
+    "you-com-web": {
+      "page_age": [
+        "unclear",
+        "unspecified"
+      ]
+    },
+    "keenable-pro": {
+      "published_at": [
+        "publication_unspecified",
+        "unspecified"
+      ],
+      "acquired_at": [
+        "index",
+        "provider_reported"
+      ]
+    }
+  },
+  "publication_estimate_named_fields": {
+    "exa-highlights": "publishedDate",
+    "parallel-advanced": "publish_date",
+    "perplexity-web": "date",
+    "valyu-search": "publication_date"
+  },
+  "conformance_schema": "source-native-core; base disagreement requires own-source review",
+  "prompt_profile": "news-next120-full-pro-eligible-lead-v2"
+}

@@ -1,0 +1,171 @@
+{
+  "policies": [
+    {
+      "policy": "publication-estimate-policy-v2.json",
+      "rules": {
+        "boundary_review": "Review credibility near a window/cutoff edge qualitatively from supported precision, interval and own evidence. No numeric margin, 95% threshold or global one-day tolerance is introduced.",
+        "failure_and_missing": "An established out-of-window applicable publication date still fails. Missing support for another requirement leaves 1 only for a concrete undisqualified lead, otherwise 0. Genuine own grade-changing conflicts remain null. Preserve failures scoped to the relevant candidate and ordinary whole-result precedence.",
+        "historical_availability_exception": "For a fixed article with a credible applicable date under an eligible mapping, no own material date conflict and no shown relevant fact newer than the historical-knowledge cutoff, the inferred publication may also support availability of the relevant returned facts by that cutoff. This extends v1\u2019s scoped owner-approved exception to method-v5\u2019s publication-alone availability limit. Record own-evidence justification; historical text identity is not independently verified.",
+        "limits": "No inspected vendor contract guarantees original publication or historical text identity. Current documentation does not prove historical server extraction behavior. This policy does not make other provider fields eligible, turn update/crawl/capture into publication, date a separately mentioned event, or establish availability of later-added snippet facts. URL-date agreement is not an accuracy estimate.",
+        "non_eligible_fields": "Brave publication-or-modification page_age/age, You web undefined page_age, Tavily publication-or-update published_date, Valyu crawl_date, Perplexity last_updated and unclear Firecrawl/Searlo fields remain under existing mappings and policies. Own explicit permitted publication evidence may still qualify independently.",
+        "provenance": "Preserve all native observations, date_kind, derivation, exact field/value, mapping/version, precision, timezone and interval unchanged. Record any inferred first publication and historical availability separately as an occurrence-reviewed application of this policy, with source-bound credibility and conflict reasons. Do not rewrite date-mappings-v3, older mappings or paid input packets.",
+        "review_conditions": [
+          "Bind the exact eligible capture configuration revision, native field/value, mapping ID and date-mappings-v3 hash. Recorded capture variants are independently bound by configuration-continuity.json to the same documented endpoint/field; native meanings are not remapped. Only the named publication fields are eligible; update, crawl, capture, mixed-role and undefined-age fields do not inherit this inference.",
+          "Establish that the estimate applies to the fixed article containing the relevant facts. A container date does not date individual changing-page entries or later-added facts.",
+          "Review all own returned dates and relevant facts for material conflicts or facts newer than the cutoff. A wider window helps confidence but cannot cure a conflict.",
+          "Compare the supported date/interval with the frozen publication window and any separate knowledge cutoff under their selected calendar/precision rules. Record reasons for credibility and window/cutoff fit.",
+          "Keep event, source, geography, entity, requested substantive requirements and other required predicates separate; passing estimated publication does not repair them."
+        ],
+        "rule": "For the exact eligible mappings, a credible applicable own publication date may satisfy first-publication eligibility for a fixed article. Exa retains its documented creation-estimate to first-publication interpretation. Valyu publication_date, Perplexity date and Parallel publish_date retain native publication_unspecified roles; first-publication credit is this owner-approved occurrence inference, not a vendor guarantee or native remapping. Estimation or unspecified original-publication provenance alone does not reject grade 2. Every other applicable requirement must pass."
+      }
+    },
+    {
+      "policy": "event-date-policy-v2.json",
+      "rules": {
+        "limits": "Does not convert generic publication/update/crawl/capture dates into event dates. A later update is not automatically the date of an earlier event. For changing pages, dates must be linked to the relevant content. Historical-knowledge requirements remain separate; a new-event link does not waive them.",
+        "rules": {
+          "advance_notice": "An advance notice that the required event will happen does not establish that it happened. A candidate supported only by that notice is 0 for a required occurred-event stage, even if its planned date is in the window. Another independently supported qualifying candidate in the same result retains ordinary maximum-grade treatment.",
+          "after_closing": "After closing is not an automatic same-day timestamp. Establish that the dated item presents the requested closing/announcement as new and that the requested period follows from this occurrence\u2019s own evidence. Preserve any stated earlier date or other material conflict.",
+          "comparison": "Apply the frozen required event kind, stage and window to the supported event date or interval. An established out-of-window event fails that candidate and earns 0. In-window dating supports grade 2 only when every other applicable requirement passes. Do not invent an exact day when only a period is supported.",
+          "conflict": "Retain genuine own conflicts that could change the highest grade as null; missing proof alone is not a conflict. Known failure dominates unrelated uncertainty for the affected candidate. Keep whole-result requirements and highest-candidate precedence.",
+          "formal_dismissal_announcement": "For workforce-reduction questions requiring the announced stage, a formal dismissal notice to affected employees counts as an announcement. No separate public press release is required. Establish the agency, notice event and requested date from this occurrence\u2019s permitted evidence. Implementation alone does not demonstrate announcement; distinguish any earlier plan announcement from later dismissal notices. All other frozen requirements and candidate precedence remain. URL dates or unclear provider dates do not become confirmed event dates.",
+          "incidental_mention": "Mentioning results inside a dated announcement about presentation selection does not date the results announcement. Missing event timing caps a concrete undisqualified lead at 1; without a concrete pointer use 0.",
+          "own_new_event_link": "An item\u2019s own supported date can date the requested event when its returned text presents that relevant event as new news, for example just announced or today announced, and the date applies to that item or entry. Interpret what event and stage the dated text actually reports. Do not assign item dates to every event mentioned."
+        }
+      }
+    },
+    {
+      "policy": "page-date-policy-v2.json",
+      "rules": {
+        "changing_page": {
+          "example": "A live-blog entry dated August 7 can support relevant August 7 content. A bare page-wide last updated August 7 cannot date an undated relevant entry.",
+          "limits": "An old container date alone does not exclude a changing page. Changing-page classification alone does not grant positive credit. Keep original first-publication meanings, estimates, conflicts, event stages and historical-availability requirements; no publisher lookup or cross-occurrence rescue.",
+          "rule": "A changing page may receive update credit when its own returned evidence links the relevant content to an in-window date, subject to all other question conditions."
+        },
+        "fairness_limit": "Both fixed-date exclusions operate only on dates exposed in each result; a hidden date cannot be excluded by this overlay.",
+        "fixed_article": {
+          "limits": "The two-day rule does not define the grade of newer articles. A URL or generic provider date used for this exclusion is not upgraded to confirmed first publication, answer proof or historical availability. Do not generalize to all old-date scan matches.",
+          "permitted_witnesses": [
+            "own returned provider date",
+            "own returned URL date",
+            "own title or snippet-start page date"
+          ],
+          "review": "Establish that the returned record describes a fixed article and that the date belongs to that article. Bind the classification, exact date witness and violated window to the same occurrence. An arbitrary date mention, related-story date or shared container date is insufficient. Retain consequential conflicts or unclear page/date scope for review.",
+          "rule": "Grade 0 when a fixed article's own page date is at least two stated calendar days before the applicable question window start, for either publication or event windows."
+        },
+        "too_late_fixed_article": {
+          "blocker": "Any own date inside the window blocks this exclusion; review consequential conflicts and date/page scope. Do not discard a full-snippet in-window witness because a short apply-list excerpt omitted it.",
+          "changing_pages": "Exempt live blogs, topic/section/guide pages, timelines, trackers and homepages. The changing_page rule still governs their linked-content update credit.",
+          "excluded_witnesses": [
+            "unclear or update provider dates",
+            "Updated labels",
+            "event dates"
+          ],
+          "limits": "Compare stated calendar days. This rule does not upgrade URL dates or estimates to answer proof or historical availability. Event-window-only questions do not inherit this late-publication exclusion; historical knowledge cutoffs remain independently governed by the method.",
+          "permitted_witnesses": [
+            "snippet-start publication dateline",
+            "explicit Published, posted, originally posted or roundup for date in own returned text",
+            "fixed article URL date",
+            "documented first-publication estimate under its pinned native mapping"
+          ],
+          "rule": "For publication-window questions only, grade 0 when a fixed article has an own publication date at least two stated calendar days after the window last day."
+        }
+      }
+    },
+    {
+      "policy": "collection-lead-policy-v2.json",
+      "rules": {
+        "child_and_collection_scope": "Failed child findings stay failed, unaccepted and uncredited. The collection-level lead is a separate disposition; it does not erase child failures or create an answer finding. A failure applying independently to the collection as a whole, such as a required source/language failure or demonstrated incompatible collection scope, still gives 0.",
+        "limits": "These rules create no grade 2. Collection currency is not event dating, confirmed first publication, historical availability, or linked-content update credit. Grade 2 still needs own support for every required predicate. Changing-page updates need dates linked to the relevant content. No cross-occurrence rescue. Historical v1 remains unchanged and reproducible.",
+        "month_without_year": "Use a month without a year only when own returned dates establish the year; do not borrow dates from another provider or result.",
+        "ordinary_event_pointer": "A concrete undisqualified event pointer can remain a normal lead 1 when date proof is missing, including a collection that actually names the relevant event. Missing proof alone is not disqualification.",
+        "precedence": "Absence of the requested topic or absence of a concrete period/event link prevents collection promotion. Child failures alone do not disqualify a separately supported exceptionally strong collection pointer under this version. An in-window date without relevant content does not suffice. Preserve genuine consequential conflicts as null.",
+        "rule": "A roundup, newsletter, category, tracker or listing is a lead only when its own returned evidence shows the requested period or event AND requested topic. A generic topic page without this link is 0. Every other requirement still applies.",
+        "running_collection": "A running tracker, so-far page or edition may cover the period when own currency evidence is on or after the window start. An own snippet, provider date (including resolvable relative dates), or URL date can establish this lead currency.",
+        "strong_collection_pointer": "A collection can earn its own result-level lead 1 despite every shown child finding failing when its own returned evidence gives very high reason to believe it holds the requested event: exceptionally strong requested-topic AND requested-period specificity. Record the exact collection-level pointer and justification. Do not automatically promote every topic/date index."
+      }
+    },
+    {
+      "policy": "frame-period-policy-v1.json",
+      "rules": {
+        "limits": "Frame interpretation does not waive source, geography, collection specificity, linked-update, fixed-article date exclusions, publication-window, event stage or historical-knowledge requirements. It adds no keyword-based blanket changes. Frozen earlier versions remain reproducible.",
+        "rules": {
+          "backward_mention": "Interpret the whole item frame; one retrospective sentence does not alone assign the period of the entire item.",
+          "different_period_or_stage": "If its own evidence presents the requested news as belonging to a different period or stage, that candidate is 0. A dated new funding round on August 5 is not a May-announcement lead.",
+          "evidence": "Only this occurrence\u2019s permitted returned evidence. Native/URL/page dates retain their meanings and do not automatically become event or first-publication proof. No memory, publisher lookup or cross-occurrence rescue.",
+          "later_reporting": "A later item reporting an earlier event is not excluded by its later date alone. Test the actual event and any separately required publication window or historical cutoff.",
+          "precedence": "Apply known failures per candidate and take the highest established candidate grade. Whole-record failures still disqualify all candidates. Missing proof is not a known failure; a concrete undisqualified pointer may remain 1. Keep genuine consequential conflicts null.",
+          "requested_period": "An item presenting itself as covering the requested period can be a lead unless its own evidence shows it cannot hold the requested event. This creates no answer facts or automatic grade 2.",
+          "stage": "An advance notice that an event will happen does not establish that it happened. Apply the frozen required stage and event-date-policy-v2."
+        }
+      }
+    },
+    {
+      "policy": "forum-source-policy-v2.json",
+      "rules": {
+        "application": "Bind a new reviewed offline label/reference/score version and future judge inputs to this policy. Preserve v1, prior captures, model outputs, judgments, findings, scores and frozen paid requests. Check existing zero reasons and other required conditions before raising a grade. Do not apply the superseded 061158 list.",
+        "hosted_material": "Official or editorial material hosted on a forum or social platform is graded normally under the question contract. An organization's own post or an outlet's own article thread is not automatically a user claim. Read each occurrence's own evidence; the domain alone does not decide attribution.",
+        "ordinary_news_user_post": {
+          "answer_grade": "Never grade 2 for a user's ordinary-news claim; the user's account is not verified.",
+          "lead_grade": "Grade 1 when the own returned evidence states concrete facts that clearly answer the question, with or without a source link. A source link is not required.",
+          "other_requirements": "All other question and owner rules still apply. Preserve window, topic, geography, stage and source distinctions. Missing answer proof alone is not a demonstrated failure. Genuine consequential conflicts remain visible.",
+          "zero_grade": "Grade 0 for opinion, chatter, speculation or no concrete question-answering facts, and for an independently established applicable disqualifier."
+        },
+        "troubleshooting": "Retain the v1 scoped attributed user problem-report and technical-analysis interpretation; q014 is exempt from the ordinary-news answer cap."
+      }
+    },
+    {
+      "policy": "calendar-date-policy-v1.json",
+      "rules": {
+        "judge_instruction": "For whole-day windows and day-precision knowledge cutoffs, compare stated calendar dates under news-calendar-dates-v1. calendar_comparison_interval is the comparison projection; interval retains the original timestamp/unknown-offset envelope for audit and exact-time requirements. A missing timezone alone must not create an unknown day-window judgment. April 10 is within a cutoff inclusive through April 10. Coarse periods or conflicting dates that cross the calendar boundary remain consequential ambiguity. Date meaning still requires own permitted evidence: this policy never upgrades a generic date, update or estimate to first publication, event timing or historical availability. Code computes membership after you establish the relevant date link."
+      }
+    },
+    {
+      "policy": "geography-policy-v2.json",
+      "rules": {
+        "forbidden_use": "News answers/leads, event/publication dates, historical availability, source independence, facility/project/market geography, or a different company/role.",
+        "limits": "This new extension replaces exact-date reuse only in explicitly versioned new inputs; old policies/facts/runs remain unchanged. Paid full-run execution still needs a reviewed exact package and owner acceptance/approval. No answer/qrel release is automatic.",
+        "permitted_fact": "Attributable company headquarters country/region, with source dates and identity preserved. A legal seat, incorporation or branch address alone is insufficient.",
+        "permitted_use": "Geography only for that exact own named company and role. Preserve native judgment and any geography-only resolution separately.",
+        "reuse": "Reuse sourced country for recent country/region questions without exact-date or routine age matching. This is current-country reuse, not a claim of historical validity. Source dates remain provenance.",
+        "role_resolution": "The judge names and quotes the company and candidate in the question's required role during ordinary reading, without guessing HQ. Code resolves identities against the pinned table; unresolved companies without a recorded lookup attempt are queued once.",
+        "temporal_exception": "Explicit cross-border movement, active country conflicts or an explicit historical-location requirement requires reviewed applicability or remains unresolved. No invented validity span. City/address changes within a country do not affect country reuse."
+      }
+    },
+    {
+      "policy": "company-role-policy-v3.json",
+      "rules": {
+        "additional_roles": [
+          "investor_headquarters",
+          "announcing_company_headquarters"
+        ],
+        "country_policy": "geography-policy-v2.json",
+        "fact_versions": "Each input or projection separately pins its immutable company-table version; a role revision never selects or changes country facts.",
+        "identity_requirement": "Own returned title/snippet must name the company and supply context establishing it as the announcing company in the question's required role. Headquarters facts support geography only for that exact company and role."
+      }
+    },
+    {
+      "policy": "effective-date-policy-v1.json",
+      "rules": {
+        "limits": "This is an owner-approved inference from the saved adopted schedule, not independent verification that no later postponement occurred. No publisher lookup, factual memory or cross-occurrence date rescue is allowed. Missing other support may retain a concrete undisqualified lead at 1; no answer facts are admitted from the date alone.",
+        "ordinary_plans": "Company plans, expectations, proposed rules and possible deadlines retain the current advance-notice treatment. This policy creates no automatic lead credit for them; independently supported concrete candidates retain ordinary highest-candidate treatment.",
+        "other_requirements": "Keep substantive fact, jurisdiction/geography, source type, independence, language, entity, required stage, knowledge cutoff and candidate/whole-record precedence unchanged. A demonstrated out-of-window effective date fails; genuine consequential conflicts remain unresolved.",
+        "precedence": "For a qualifying adopted effective-date finding only, this policy overrides the advance-notice zero and the older-fixed-article exclusion as applied to that event window. Separately requested publication windows and historical knowledge cutoffs remain in force. The exception does not date announcements, launches, completion or other stages.",
+        "review": "Identify the adopted requirement and the definite effective-date statement in this occurrence's permitted title/snippets. Attribution may be qualifying reporting, analysis or official material under the question's existing source rule; do not invent an official-source-only requirement. Do not infer adoption merely from a possible, proposed or expected deadline. Preserve exact own support and any conditions, postponement or incompatible dates.",
+        "rule": "For a question requesting the effective stage, an item's own evidence of an officially adopted requirement and its definite effective date may establish that effective event on the stated date, even when reported before that date. Grade 2 requires the effective date inside the requested window and every other applicable condition supported."
+      }
+    },
+    {
+      "policy": "publication-context-policy-v1.json",
+      "rules": {
+        "changing_items": "For a live blog, tracker or collection, the date must belong to the relevant report/entry itself. A page-wide date cannot date undated children or prove their original publication. A dated edition may establish that edition's publication period, not every separately linked item's period.",
+        "comparison_and_precedence": "Compare the supported publication period with the requested window. A demonstrated out-of-window publication fails; a period crossing a consequential boundary remains unresolved. Apply existing fixed-article exclusions only to applicable dates after own date meaning/scope review; this extension does not silently waive them. Retain genuine incompatible original-publication evidence as a conflict rather than choosing a favorable date.",
+        "limits": "This is reasonable own-evidence inference, not independently verified first publication or historical text identity. Do not infer event timing, first disclosure or past availability merely because a publication label fits. No destination lookup, outside memory or cross-occurrence rescue. Missing support leaves a specific undisqualified lead at 1, generic overlap is 0, and genuine grade-changing conflict stays null.",
+        "review": "Explain why the label dates publication of the relevant item or dated entry rather than an event, measurement period, related story, update, retrieval or container. Preserve exact own quote/field locations, period precision and any date conflicts or evidence of earlier publication/republication. Every other applicable requirement must pass for grade 2.",
+        "rule": "A credible clear publication date, report dateline or edition label in this occurrence's own title/snippets may establish the publication period of that item containing the relevant finding. When the question requests first publication, this is a reviewed original-publication inference; special first-published wording or a provider-specific field is not mandatory. Record the inference separately from native observations.",
+        "unchanged_meanings": "An unclear native date alone does not establish publication. Update, crawl and capture dates cannot substitute for first publication. A publication/edition date does not date a separately mentioned event or establish first disclosure by itself. Event stages, historical knowledge requirements and all other requested predicates remain unchanged. Existing explicitly bound native publication-estimate inferences remain available under their parent policy."
+      }
+    }
+  ],
+  "version": "news-standalone-policy-v2"
+}

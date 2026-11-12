@@ -1,0 +1,474 @@
+{
+  "profile": "simple-question-to-report-v1",
+  "author": {
+    "type": "object",
+    "properties": {
+      "questions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "question_id": {
+              "type": "string"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "need_id": {
+              "type": "string"
+            },
+            "family_id": {
+              "type": "string"
+            },
+            "original_need": {
+              "type": "string"
+            },
+            "provider_query": {
+              "type": "string"
+            },
+            "primary_subject": {
+              "type": "string"
+            },
+            "secondary_tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "geography": {
+              "type": "object",
+              "properties": {
+                "regions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "applies_to": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "regions",
+                "applies_to"
+              ],
+              "additionalProperties": false
+            },
+            "contract": {
+              "type": "object",
+              "properties": {
+                "query_language": {
+                  "type": "string",
+                  "enum": [
+                    "English"
+                  ]
+                },
+                "source_rule": {
+                  "type": "object",
+                  "properties": {
+                    "independence_required": {
+                      "type": "boolean"
+                    },
+                    "qualifying_material": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "independence_required",
+                    "qualifying_material"
+                  ],
+                  "additionalProperties": false
+                },
+                "temporal_requirements": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "basis": {
+                            "type": "string",
+                            "enum": [
+                              "publication"
+                            ]
+                          },
+                          "start_inclusive": {
+                            "type": "string"
+                          },
+                          "end_exclusive": {
+                            "type": "string"
+                          },
+                          "timezone": {
+                            "type": "string"
+                          },
+                          "precision": {
+                            "type": "string"
+                          },
+                          "question_phrase": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "basis",
+                          "start_inclusive",
+                          "end_exclusive",
+                          "timezone",
+                          "precision",
+                          "question_phrase"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "basis": {
+                            "type": "string",
+                            "enum": [
+                              "event"
+                            ]
+                          },
+                          "start_inclusive": {
+                            "type": "string"
+                          },
+                          "end_exclusive": {
+                            "type": "string"
+                          },
+                          "timezone": {
+                            "type": "string"
+                          },
+                          "precision": {
+                            "type": "string"
+                          },
+                          "question_phrase": {
+                            "type": "string"
+                          },
+                          "event_kind": {
+                            "type": "string"
+                          },
+                          "stage": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "basis",
+                          "start_inclusive",
+                          "end_exclusive",
+                          "timezone",
+                          "precision",
+                          "question_phrase",
+                          "event_kind",
+                          "stage"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "as_of_requirement": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "meaning": {
+                          "type": "string",
+                          "enum": [
+                            "historical_state",
+                            "historical_knowledge",
+                            "both"
+                          ]
+                        },
+                        "cutoff": {
+                          "anyOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "target_time": {
+                          "anyOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "timezone": {
+                          "type": "string"
+                        },
+                        "question_phrase": {
+                          "type": "string"
+                        },
+                        "boundary": {
+                          "anyOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "string",
+                              "enum": [
+                                "inclusive",
+                                "exclusive"
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "meaning",
+                        "cutoff",
+                        "target_time",
+                        "timezone",
+                        "question_phrase",
+                        "boundary"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ]
+                },
+                "allowed_snippet_languages": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "background_context_allowed": {
+                  "type": "boolean"
+                },
+                "background_context_definition": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "qualifying_predicates": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "requested_facets": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "text": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "text"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "requested_report_target": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "query_language",
+                "source_rule",
+                "temporal_requirements",
+                "as_of_requirement",
+                "allowed_snippet_languages",
+                "background_context_allowed",
+                "background_context_definition",
+                "qualifying_predicates",
+                "requested_facets",
+                "requested_report_target"
+              ],
+              "additionalProperties": false
+            },
+            "source_pair_id": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "required": [
+            "question_id",
+            "revision",
+            "need_id",
+            "family_id",
+            "original_need",
+            "provider_query",
+            "primary_subject",
+            "secondary_tags",
+            "geography",
+            "contract",
+            "source_pair_id"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "unresolved": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "question_id": {
+              "type": "string"
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "question_id",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "questions",
+      "unresolved"
+    ],
+    "additionalProperties": false
+  },
+  "admission": {
+    "type": "object",
+    "properties": {
+      "decisions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "question_id": {
+              "type": "string"
+            },
+            "decision": {
+              "type": "string",
+              "enum": [
+                "admit",
+                "reject",
+                "needs_clarification"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            },
+            "valid_answer_description": {
+              "type": "string"
+            },
+            "caveats": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "question_id",
+            "decision",
+            "reason",
+            "valid_answer_description",
+            "caveats"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "decisions"
+    ],
+    "additionalProperties": false
+  },
+  "checkpoint": {
+    "type": "object",
+    "properties": {
+      "decision": {
+        "type": "string",
+        "enum": [
+          "continue",
+          "stop"
+        ]
+      },
+      "material_method_change": {
+        "type": "boolean"
+      },
+      "unexplained_material_differences": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "invariant_failures": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "inspection": {
+        "type": "object",
+        "properties": {
+          "model_inputs": {
+            "type": "string"
+          },
+          "date_source_and_quotes": {
+            "type": "string"
+          },
+          "changed_and_unchanged_cases": {
+            "type": "string"
+          },
+          "ranking_movements": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "model_inputs",
+          "date_source_and_quotes",
+          "changed_and_unchanged_cases",
+          "ranking_movements"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "decision",
+      "material_method_change",
+      "unexplained_material_differences",
+      "invariant_failures",
+      "inspection"
+    ],
+    "additionalProperties": false
+  }
+}

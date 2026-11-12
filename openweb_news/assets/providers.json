@@ -1,0 +1,1035 @@
+[
+  {
+    "configuration_id": "brave-news",
+    "provider": "Brave",
+    "method": "GET",
+    "endpoint": "https://api.search.brave.com/res/v1/news/search",
+    "base_body": {
+      "count": 10,
+      "extra_snippets": true,
+      "country": "ALL"
+    },
+    "query_fields": {
+      "q": "string"
+    },
+    "auth": {
+      "header": "X-Subscription-Token",
+      "prefix": "",
+      "secret_ref": "OPENWEB_NEWS_BRAVE_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "result_fields": {
+      "container": "results",
+      "title": "title",
+      "url": "url",
+      "content": "description",
+      "content_shape": "string",
+      "metadata": [
+        "page_age",
+        "age",
+        "page_fetched",
+        "fetched_content_timestamp",
+        "meta_url"
+      ],
+      "additional_content": {
+        "extra_snippets": "string_array"
+      },
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.005",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-28 public rate rechecked; not an account tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "brave-web",
+    "provider": "Brave",
+    "method": "GET",
+    "endpoint": "https://api.search.brave.com/res/v1/web/search",
+    "base_body": {
+      "count": 10,
+      "extra_snippets": true
+    },
+    "query_fields": {
+      "q": "string"
+    },
+    "auth": {
+      "header": "X-Subscription-Token",
+      "prefix": "",
+      "secret_ref": "OPENWEB_NEWS_BRAVE_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "result_fields": {
+      "container": "web.results",
+      "title": "title",
+      "url": "url",
+      "content": "description",
+      "content_shape": "string",
+      "metadata": [
+        "page_age",
+        "age",
+        "page_fetched",
+        "fetched_content_timestamp",
+        "meta_url"
+      ],
+      "additional_content": {
+        "extra_snippets": "string_array"
+      },
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.005",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "bright-data-serp",
+    "provider": "Bright Data",
+    "method": "POST",
+    "endpoint": "https://api.brightdata.com/request",
+    "base_body": {
+      "format": "raw",
+      "data_format": "parsed_light",
+      "zone": "$credential:OPENWEB_NEWS_BRIGHTDATA_ZONE"
+    },
+    "query_fields": {
+      "url": "google_url"
+    },
+    "auth": {
+      "header": "Authorization",
+      "prefix": "Bearer ",
+      "secret_ref": "OPENWEB_NEWS_BRIGHTDATA_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "body_secret_refs": {
+      "zone": "OPENWEB_NEWS_BRIGHTDATA_ZONE"
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "result_fields": {
+      "container": "organic",
+      "title": "title",
+      "url": "link",
+      "content": "description",
+      "content_shape": "string",
+      "metadata": [
+        "global_rank"
+      ],
+      "additional_content": {},
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.0015",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "exa-highlights",
+    "provider": "Exa",
+    "method": "POST",
+    "endpoint": "https://api.exa.ai/search",
+    "base_body": {
+      "type": "auto",
+      "numResults": 10,
+      "contents": {
+        "highlights": true
+      }
+    },
+    "query_fields": {
+      "query": "string"
+    },
+    "auth": {
+      "header": "x-api-key",
+      "prefix": "",
+      "secret_ref": "OPENWEB_NEWS_EXA_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "exa_publication",
+    "result_fields": {
+      "container": "results",
+      "title": "title",
+      "url": "url",
+      "content": "highlights",
+      "content_shape": "string_array",
+      "metadata": [
+        "publishedDate",
+        "score"
+      ],
+      "additional_content": {},
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.007",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-28 public rate rechecked; not an account tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "firecrawl-news",
+    "provider": "Firecrawl",
+    "method": "POST",
+    "endpoint": "https://api.firecrawl.dev/v2/search",
+    "base_body": {
+      "limit": 10,
+      "sources": [
+        "news"
+      ],
+      "highlights": false
+    },
+    "query_fields": {
+      "query": "string"
+    },
+    "auth": {
+      "header": "Authorization",
+      "prefix": "Bearer ",
+      "secret_ref": "OPENWEB_NEWS_FIRECRAWL_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "result_fields": {
+      "container": "data.news",
+      "title": "title",
+      "url": "url",
+      "content": "snippet",
+      "content_shape": "string",
+      "metadata": [
+        "date",
+        "source",
+        "position"
+      ],
+      "additional_content": {},
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.010",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "firecrawl-web",
+    "provider": "Firecrawl",
+    "method": "POST",
+    "endpoint": "https://api.firecrawl.dev/v2/search",
+    "base_body": {
+      "limit": 10,
+      "sources": [
+        "web"
+      ],
+      "highlights": false
+    },
+    "query_fields": {
+      "query": "string"
+    },
+    "auth": {
+      "header": "Authorization",
+      "prefix": "Bearer ",
+      "secret_ref": "OPENWEB_NEWS_FIRECRAWL_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "result_fields": {
+      "container": "data.web",
+      "title": "title",
+      "url": "url",
+      "content": "description",
+      "content_shape": "string",
+      "metadata": [
+        "date",
+        "source",
+        "position"
+      ],
+      "additional_content": {},
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.010",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "linkup-fast",
+    "provider": "Linkup",
+    "method": "POST",
+    "endpoint": "https://api.linkup.so/v1/search",
+    "base_body": {
+      "depth": "fast",
+      "outputType": "searchResults",
+      "maxResults": 10
+    },
+    "query_fields": {
+      "q": "string"
+    },
+    "auth": {
+      "header": "Authorization",
+      "prefix": "Bearer ",
+      "secret_ref": "OPENWEB_NEWS_LINKUP_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "result_fields": {
+      "container": "results",
+      "title": "name",
+      "url": "url",
+      "content": "content",
+      "content_shape": "string",
+      "metadata": [
+        "type"
+      ],
+      "additional_content": {},
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.005",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "oxylabs-search",
+    "provider": "Oxylabs AI Studio",
+    "method": "POST",
+    "endpoint": "https://api-aistudio.oxylabs.io/search/instant",
+    "base_body": {
+      "limit": 10
+    },
+    "query_fields": {
+      "query": "string"
+    },
+    "auth": {
+      "header": "x-api-key",
+      "prefix": "",
+      "secret_ref": "OPENWEB_NEWS_OXYLABS_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "result_fields": {
+      "container": "data",
+      "title": "title",
+      "url": "url",
+      "content": "description",
+      "content_shape": "string",
+      "metadata": [],
+      "additional_content": {},
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.004",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "parallel-advanced",
+    "provider": "Parallel",
+    "method": "POST",
+    "endpoint": "https://api.parallel.ai/v1/search",
+    "base_body": {
+      "mode": "advanced"
+    },
+    "query_fields": {
+      "objective": "string",
+      "search_queries": "single_item_array"
+    },
+    "auth": {
+      "header": "x-api-key",
+      "prefix": "",
+      "secret_ref": "OPENWEB_NEWS_PARALLEL_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "result_fields": {
+      "container": "results",
+      "title": "title",
+      "url": "url",
+      "content": "excerpts",
+      "content_shape": "string_array",
+      "metadata": [
+        "publish_date"
+      ],
+      "additional_content": {},
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.005",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "perplexity-web",
+    "provider": "Perplexity",
+    "method": "POST",
+    "endpoint": "https://api.perplexity.ai/search",
+    "base_body": {
+      "max_results": 10,
+      "search_type": "web",
+      "search_context_size": "high"
+    },
+    "query_fields": {
+      "query": "string"
+    },
+    "auth": {
+      "header": "Authorization",
+      "prefix": "Bearer ",
+      "secret_ref": "OPENWEB_NEWS_PERPLEXITY_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "perplexity_publication",
+    "result_fields": {
+      "container": "results",
+      "title": "title",
+      "url": "url",
+      "content": "snippet",
+      "content_shape": "string",
+      "metadata": [
+        "date",
+        "last_updated"
+      ],
+      "additional_content": {},
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.005",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "searlo-news",
+    "provider": "Searlo",
+    "method": "GET",
+    "endpoint": "https://api.searlo.tech/api/v1/search/news",
+    "base_body": {
+      "limit": 10
+    },
+    "query_fields": {
+      "q": "string"
+    },
+    "auth": {
+      "header": "x-api-key",
+      "prefix": "",
+      "secret_ref": "OPENWEB_NEWS_SEARLO_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "result_fields": {
+      "container": "items",
+      "title": "title",
+      "url": "link",
+      "content": "snippet",
+      "content_shape": "string",
+      "metadata": [
+        "date",
+        "source",
+        "position",
+        "rank",
+        "news"
+      ],
+      "additional_content": {
+        "description": "string"
+      },
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.0008",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "searlo-web",
+    "provider": "Searlo",
+    "method": "GET",
+    "endpoint": "https://api.searlo.tech/api/v1/search/web",
+    "base_body": {
+      "limit": 10
+    },
+    "query_fields": {
+      "q": "string"
+    },
+    "auth": {
+      "header": "x-api-key",
+      "prefix": "",
+      "secret_ref": "OPENWEB_NEWS_SEARLO_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "result_fields": {
+      "container": "items",
+      "title": "title",
+      "url": "link",
+      "content": "snippet",
+      "content_shape": "string",
+      "metadata": [
+        "date",
+        "source",
+        "position",
+        "rank",
+        "news"
+      ],
+      "additional_content": {
+        "description": "string"
+      },
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.0008",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "tavily-news",
+    "provider": "Tavily",
+    "method": "POST",
+    "endpoint": "https://api.tavily.com/search",
+    "base_body": {
+      "topic": "news",
+      "search_depth": "basic",
+      "max_results": 10,
+      "include_answer": false,
+      "include_raw_content": false,
+      "auto_parameters": false
+    },
+    "query_fields": {
+      "query": "string"
+    },
+    "auth": {
+      "header": "Authorization",
+      "prefix": "Bearer ",
+      "secret_ref": "OPENWEB_NEWS_TAVILY_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "result_fields": {
+      "container": "results",
+      "title": "title",
+      "url": "url",
+      "content": "content",
+      "content_shape": "string",
+      "metadata": [
+        "published_date",
+        "score"
+      ],
+      "additional_content": {},
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.008",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "tavily-general",
+    "provider": "Tavily",
+    "method": "POST",
+    "endpoint": "https://api.tavily.com/search",
+    "base_body": {
+      "topic": "general",
+      "search_depth": "basic",
+      "max_results": 10,
+      "include_answer": false,
+      "include_raw_content": false,
+      "auto_parameters": false
+    },
+    "query_fields": {
+      "query": "string"
+    },
+    "auth": {
+      "header": "Authorization",
+      "prefix": "Bearer ",
+      "secret_ref": "OPENWEB_NEWS_TAVILY_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "result_fields": {
+      "container": "results",
+      "title": "title",
+      "url": "url",
+      "content": "content",
+      "content_shape": "string",
+      "metadata": [
+        "published_date",
+        "score"
+      ],
+      "additional_content": {},
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-11-05",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.008",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": true,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic native container/text mapping only; exact general-mode live access and behavior remain unverified."
+    },
+    "configuration_note": "Owner-selected general/web clean-run product. Separate from historical tavily-news; select explicitly instead of news. No include_published_date or strict publication filtering opt-in."
+  },
+  {
+    "configuration_id": "valyu-search",
+    "provider": "Valyu",
+    "method": "POST",
+    "endpoint": "https://api.valyu.ai/v1/search",
+    "base_body": {
+      "max_num_results": 10,
+      "search_type": "web",
+      "country_code": "ALL"
+    },
+    "query_fields": {
+      "query": "string"
+    },
+    "auth": {
+      "header": "X-API-Key",
+      "prefix": "",
+      "secret_ref": "OPENWEB_NEWS_VALYU_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "valyu_publication",
+    "result_fields": {
+      "container": "results",
+      "title": "title",
+      "url": "url",
+      "content": "description",
+      "content_shape": "string",
+      "metadata": [
+        "publication_date",
+        "source",
+        "price"
+      ],
+      "additional_content": {},
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.015",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "you-com-web",
+    "provider": "You.com",
+    "method": "POST",
+    "endpoint": "https://ydc-index.io/v1/search",
+    "base_body": {
+      "count": 10
+    },
+    "query_fields": {
+      "query": "string"
+    },
+    "auth": {
+      "header": "X-API-Key",
+      "prefix": "",
+      "secret_ref": "OPENWEB_NEWS_YOUCOM_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "result_fields": {
+      "container": "results.web",
+      "title": "title",
+      "url": "url",
+      "content": "snippets",
+      "content_shape": "string_array",
+      "metadata": [
+        "page_age"
+      ],
+      "additional_content": {
+        "description": "string"
+      },
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.005",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": false,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "keenable-pro",
+    "provider": "Keenable",
+    "method": "POST",
+    "endpoint": "https://api.keenable.ai/v1/search",
+    "base_body": {
+      "mode": "pro",
+      "max_results": 10
+    },
+    "query_fields": {
+      "query": "string"
+    },
+    "auth": {
+      "header": "X-API-Key",
+      "prefix": "",
+      "secret_ref": "OPENWEB_NEWS_KEENABLE_API_KEY",
+      "aliases": [],
+      "presence_or_access_checked": false
+    },
+    "requested_depth": 10,
+    "date_mapping": "keenable_publication",
+    "result_fields": {
+      "container": "results",
+      "title": "title",
+      "url": "url",
+      "content": "snippet",
+      "content_shape": "string",
+      "metadata": [
+        "published_at",
+        "acquired_at"
+      ],
+      "additional_content": {
+        "description": "string"
+      },
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-10-15",
+    "rank_semantics": "Native returned list order; all rows retained, top10 flagged; no refill, sort, deduplication or clipping.",
+    "location_mapping": "No subject/HQ/event country is converted into an API ranking or publisher-country control. No client location headers.",
+    "language_mapping": "Same English query; no added language restriction. Documented server defaults remain disclosed.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "price_usd_per_call": "0.004",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": true,
+    "price_estimate_as_of": "2026-10-15; historical planning estimate, not a current tariff or spend cap",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "serper-web",
+    "provider": "Serper",
+    "endpoint": "https://google.serper.dev/search",
+    "method": "POST",
+    "base_body": {
+      "num": 10
+    },
+    "query_fields": {
+      "q": "string"
+    },
+    "result_fields": {
+      "container": "organic",
+      "title": "title",
+      "content": "snippet",
+      "content_shape": "string",
+      "url": "link",
+      "metadata": [
+        "date"
+      ],
+      "native_dates_version": 1
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "price_usd_per_call": "0.010",
+    "docs_checked_at": "2026-09-30",
+    "auth": {
+      "header": "X-API-KEY",
+      "prefix": "",
+      "secret_ref": "OPENWEB_NEWS_SERPER_API_KEY",
+      "aliases": []
+    },
+    "optional": true,
+    "operational_state": "offline_fixture_tested_historical_account_issue_unresolved",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "price_estimate_as_of": "historical snapshot; not a current tariff or spend cap",
+    "rank_semantics": "Native list order retained; no sort, refill or response-container fallback.",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "scavio-web",
+    "provider": "Scavio",
+    "endpoint": "https://api.scavio.dev/api/v2/google",
+    "method": "POST",
+    "base_body": {},
+    "query_fields": {
+      "query": "string"
+    },
+    "result_fields": {
+      "container": "organic_results",
+      "title": "title",
+      "content": "snippet",
+      "content_shape": "string",
+      "url": "link",
+      "metadata": [],
+      "native_dates_version": 1
+    },
+    "requested_depth": 10,
+    "date_mapping": "unmapped",
+    "price_usd_per_call": "0.010",
+    "docs_checked_at": "2026-09-30",
+    "auth": {
+      "header": "Authorization",
+      "prefix": "Bearer ",
+      "secret_ref": "OPENWEB_NEWS_SCAVIO_API_KEY",
+      "aliases": []
+    },
+    "optional": true,
+    "operational_state": "offline_fixture_tested_historical_account_issue_unresolved",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "price_estimate_as_of": "historical snapshot; not a current tariff or spend cap",
+    "rank_semantics": "Native list order retained; no sort, refill or response-container fallback.",
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic pinned native container/text shapes, valid empty response, malformed/missing container and HTTP failure; no account or endpoint-access proof."
+    }
+  },
+  {
+    "configuration_id": "seltz-web-pro",
+    "provider": "Seltz",
+    "method": "POST",
+    "endpoint": "https://api.seltz.ai/v1/search",
+    "base_body": {
+      "max_results": 10,
+      "scope": "web",
+      "tier": "pro",
+      "fields": {
+        "content": false,
+        "snippets": true
+      }
+    },
+    "query_fields": {
+      "query": "string"
+    },
+    "auth": {
+      "header": "x-api-key",
+      "prefix": "",
+      "secret_ref": "OPENWEB_NEWS_SELTZ_API_KEY",
+      "aliases": []
+    },
+    "requested_depth": 10,
+    "date_mapping": "seltz_publication",
+    "result_fields": {
+      "container": "documents",
+      "title": "properties.title",
+      "url": "url",
+      "content": "snippets",
+      "content_shape": "object_text_array",
+      "metadata": [
+        "published_date",
+        "properties"
+      ],
+      "additional_content": {},
+      "native_dates_version": 1
+    },
+    "docs_checked_at": "2026-11-01",
+    "rank_semantics": "Native document and snippet order; all returned rows and fields retained; no sorting, deduplication, refill or clipping.",
+    "location_mapping": "No subject country is converted to a ranking-country filter.",
+    "language_mapping": "Same English query; no added language restriction.",
+    "operational_state": "offline_fixture_tested_no_live_verification",
+    "native_product": "Explicit native snippet objects; full document content disabled; no snippet/token length override.",
+    "title_semantics": "Optional title property only if actually returned; no title synthesized from document content.",
+    "native_date_semantics": "Provider publication claim retained; no original-publication truth or scoped publication-estimate inference assumed.",
+    "price_usd_per_call": "0.005",
+    "price_estimate_as_of": "2026-11-01 published Pro search rate; not an account invoice or guaranteed bound",
+    "account_specific_cost_verified": false,
+    "live_execution_authorized": false,
+    "optional": true,
+    "verification": {
+      "fixture_tested": true,
+      "live_tested": false,
+      "scope": "Synthetic REST/native snippet object shapes, unchanged indices, malformed entries, valid empty lists, body mismatch, publication/event request mapping and credential-free collection-only execution; no live account/native response proof."
+    }
+  }
+]

@@ -1,0 +1,44 @@
+name: Distributions
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  offline-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Build wheel and source archive
+        run: |
+          python -m pip install build
+          python -m build
+      - name: Test the extracted source archive
+        run: |
+          mkdir "$RUNNER_TEMP/source"
+          tar -xzf dist/*.tar.gz -C "$RUNNER_TEMP/source"
+          cd "$RUNNER_TEMP/source"/openweb_benchmark_news-*
+          test -f .env.example
+          test -f ATTRIBUTION.md
+          test -f INSTALL.md
+          python - <<'PY'
+          import unittest
+
+          suite = unittest.defaultTestLoader.discover('.')
+          if suite.countTestCases() == 0:
+              raise SystemExit('No tests discovered in the source archive')
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          raise SystemExit(not result.wasSuccessful())
+          PY
+      - name: Smoke-test the installed wheel outside the checkout
+        run: |
+          python -m venv "$RUNNER_TEMP/wheel-venv"
+          "$RUNNER_TEMP/wheel-venv/bin/python" -m pip install --no-index --no-deps dist/*.whl
+          cd "$RUNNER_TEMP"
+          "$RUNNER_TEMP/wheel-venv/bin/openweb-news" example --output "$RUNNER_TEMP/example"

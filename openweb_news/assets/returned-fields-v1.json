@@ -1,0 +1,12 @@
+{
+  "profile": "returned-fields-v1",
+  "scope": "Original positions within the benchmark pool depth, including repeated URLs; never missing result slots or failed calls",
+  "characters": "Unicode code points, preserving returned whitespace and repetition; sum field lengths without artificial separators",
+  "words": "Whitespace-separated chunks; descriptive only, not model tokens or language-independent linguistic words",
+  "snippets": "Primary snippet and all additional snippet strings; titles and metadata excluded; primary and additional lengths also reported separately",
+  "percentiles": "Nearest-rank percentile on all measured returned positions, including zero length for absent or empty snippet text",
+  "length_band_lower_bounds": [1, 200, 500, 1000, 2000],
+  "mechanical_metadata_fields": ["rank", "position", "index"],
+  "metadata": "Nonempty native metadata entries excluding mechanical rank/position/index and duplicate date aliases; supplied date metadata is availability, not validated publication/event proof",
+  "quality": "Own result grades; raw position counts, not family-weighted nDCG. Unknown and ungraded counts remain separate. Length associations are retrospective and confounded by provider, query, rank and duplicate mix"
+}

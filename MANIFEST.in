@@ -1,0 +1,2 @@
+include .env.example ATTRIBUTION.md CHANGELOG.md INSTALL.md PROVIDERS.md REPRODUCE.md START.md
+recursive-include tests *.py

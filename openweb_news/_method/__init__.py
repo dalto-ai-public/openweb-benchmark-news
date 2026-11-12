@@ -1,0 +1,1 @@
+"""Portable frozen-method implementations."""

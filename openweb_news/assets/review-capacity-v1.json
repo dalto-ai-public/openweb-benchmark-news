@@ -1,0 +1,9 @@
+{
+  "profile": "complete-checkpoint-capacity-v1",
+  "measurement": "serialized-utf8-bytes-v1",
+  "planning_rule": "Serialized packet UTF-8 bytes plus declared maximum output tokens and scaffolding reserve must not exceed the explicitly declared context window. The minimum unit-coverage reply must also fit the declared output allowance. Bytes are conservative planning units, not a measured token count or a guarantee of account/CLI capacity; a valid complete verdict may require more output than its minimum echo.",
+  "part_prompt": "checkpoint-review-v2.md",
+  "coverage_field": "reviewed_unit_ids",
+  "coverage_rule": "Every source unit must have a valid continuing independent part verdict or an exact unchanged-case certificate from a verified continuing prior checkpoint. Any negative verdict stops; partial coverage cannot continue.",
+  "partition_rule": "Keep each complete case with its final outcome and associated review requests/responses. Other report/audit data is partitioned as complete rows or values. No sampling, truncation, automatic context upgrade or implicit additional calls."
+}

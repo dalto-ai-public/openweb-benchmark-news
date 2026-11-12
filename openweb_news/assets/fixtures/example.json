@@ -1,0 +1,32 @@
+{
+  "notice": "Entirely synthetic software fixtures. These are not benchmark questions or news evidence.",
+  "questions": [
+    {
+      "question_id": "synthetic-answer", "revision": 1, "family_id": "synthetic-answer", "need_id": "synthetic-answer",
+      "provider_query": "Find editorial reports about the fictional Aster observatory opening.",
+      "geography": {"applies_to": "no_geographic_restriction", "regions": ["global"]},
+      "contract": {"source_rule": {"qualifying_material": ["editorial reporting"], "independence_required": false}, "temporal_requirements": [], "as_of_requirement": null, "allowed_snippet_languages": ["*"], "background_context_allowed": false, "qualifying_predicates": ["The item reports the fictional Aster observatory opening."], "requested_facets": []}
+    },
+    {
+      "question_id": "synthetic-empty", "revision": 1, "family_id": "synthetic-empty", "need_id": "synthetic-empty",
+      "provider_query": "Find editorial reports about the fictional Bracken observatory opening.",
+      "geography": {"applies_to": "no_geographic_restriction", "regions": ["global"]},
+      "contract": {"source_rule": {"qualifying_material": ["editorial reporting"], "independence_required": false}, "temporal_requirements": [], "as_of_requirement": null, "allowed_snippet_languages": ["*"], "background_context_allowed": false, "qualifying_predicates": ["The item reports the fictional Bracken observatory opening."], "requested_facets": []}
+    },
+    {
+      "question_id": "synthetic-primary-failure", "revision": 1, "family_id": "synthetic-primary-failure", "need_id": "synthetic-primary-failure",
+      "provider_query": "Find editorial reports about the fictional Cedar observatory opening.",
+      "geography": {"applies_to": "no_geographic_restriction", "regions": ["global"]},
+      "contract": {"source_rule": {"qualifying_material": ["editorial reporting"], "independence_required": false}, "temporal_requirements": [], "as_of_requirement": null, "allowed_snippet_languages": ["*"], "background_context_allowed": false, "qualifying_predicates": ["The item reports the fictional Cedar observatory opening."], "requested_facets": []}
+    },
+    {
+      "question_id": "synthetic-disagreement", "revision": 1, "family_id": "synthetic-disagreement", "need_id": "synthetic-disagreement",
+      "provider_query": "Find editorial reports about the fictional Dune observatory opening.",
+      "geography": {"applies_to": "no_geographic_restriction", "regions": ["global"]},
+      "contract": {"source_rule": {"qualifying_material": ["editorial reporting"], "independence_required": false}, "temporal_requirements": [], "as_of_requirement": null, "allowed_snippet_languages": ["*"], "background_context_allowed": false, "qualifying_predicates": ["The item reports the fictional Dune observatory opening."], "requested_facets": []}
+    }
+  ],
+  "provider_ids": ["brave-news", "exa-highlights"],
+  "title": "Editorial report: the fictional Aster observatory opened.",
+  "url": "https://news.example/fictional-observatory"
+}

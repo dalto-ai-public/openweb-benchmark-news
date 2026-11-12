@@ -1,0 +1,29 @@
+{
+  "profile": "blind-own-evidence-projection-v1",
+  "policy_overrides": {
+    "publication-estimate-policy-v2.json": {
+      "rules": {
+        "non_eligible_fields": "Native date IDs not explicitly listed as eligible cannot establish publication-window or historical-availability predicates, or disambiguate dates used for those predicates. They retain their exact values and declared meanings for ordinary page, source and lead context under existing policies. Own explicit permitted publication evidence may still qualify independently. No update, crawl, index, capture, mixed-role or undefined-age field becomes first-publication evidence through admission.",
+        "provenance": "Preserve native observations, date_kind, derivation, raw value, precision, timezone and interval. Exact source field/mapping/version and configuration authority remain bound privately. Record any inferred first publication and historical availability separately as an occurrence-reviewed application with own-evidence credibility and conflict reasons. Do not rewrite historical inputs or native meanings.",
+        "review_conditions": [
+          "Use only native date IDs listed as eligible by the independently verified owner-selected exact-field receipt for publication-window or historical-availability proof. Configuration, mapping and source bindings are checked privately before this model view is prepared. Admission does not change native date meanings. Update, crawl, index, capture, mixed-role and undefined-age fields do not inherit publication inference.",
+          "Establish that the estimate applies to the fixed article containing the relevant facts. A container date does not date individual changing-page entries or later-added facts.",
+          "Review all own returned dates and relevant facts for material conflicts or facts newer than the cutoff. A wider window helps confidence but cannot cure a conflict.",
+          "Compare the supported date/interval with the frozen publication window and any separate knowledge cutoff under their selected calendar/precision rules. Record reasons for credibility and window/cutoff fit.",
+          "Keep event, source, geography, entity, requested substantive requirements and other required predicates separate; passing estimated publication does not repair them."
+        ],
+        "rule": "For the exact eligible native date IDs, a credible applicable own publication date may satisfy first-publication eligibility for a fixed article. A declared documented creation estimate retains its reviewed first-publication interpretation. A native publication_unspecified date retains that role; first-publication credit is an owner-approved occurrence inference, not a vendor guarantee or native remapping. Estimation or unspecified original-publication provenance alone does not reject grade 2. Every other applicable requirement must pass."
+      }
+    }
+  },
+  "prompt_replacements": [
+    {
+      "source": "Publication-estimate inference applies only when the input explicitly supplies an independently reviewed exact configuration/field applicability binding; an old provider name or mapping is insufficient.",
+      "display": "Publication-estimate inference applies only to eligible native date IDs in the independently verified owner-selected field receipt. Exact configuration and field authority are checked privately; field admission alone does not establish occurrence credibility or applicability."
+    },
+    {
+      "source": "The native_mapping_proof explains the deterministic field-to-policy binding.\nApplicability and observation mapping IDs hash different scopes; they need not\nmatch. The listed packaged method and policy assets are the standalone authority;\nan upstream file hash is not required. This proof establishes field eligibility\nonly. Judge fixed-item applicability and all other checks from this occurrence.",
+      "display": "The native_mapping_proof lists native date IDs whose exact field-to-policy authority was checked privately against the owner-selected receipt and packaged method. It establishes field eligibility only. Judge fixed-item applicability and all other checks from this occurrence."
+    }
+  ]
+}
