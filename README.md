@@ -9,7 +9,7 @@ model judgments and writes HTML, JSON and CSV reports.
 - [Installation and first full run](INSTALL.md) for the question-to-report
   workflow, credentials and resume.
 - [Providers](PROVIDERS.md) for configuration choices and how to change the roster.
-- [Reproduce saved scores](REPRODUCE.md) for the separate benchmark data release.
+- [Download the 400-question dataset](https://github.com/dalto-ai-public/openweb-benchmark-news/releases/download/v0.1.0/openweb-benchmark-news-data-0.1.0.tar.gz) or [reproduce the saved scores](REPRODUCE.md).
 - [Method and scope](openweb_news/assets/purpose-and-scope.md) for the grading,
   evidence and interpretation rules.
 
