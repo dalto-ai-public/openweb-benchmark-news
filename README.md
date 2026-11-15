@@ -5,6 +5,7 @@ answer news questions using the evidence returned in their search responses.
 The runner prepares question contracts, collects results, obtains independent
 model judgments and writes HTML, JSON and CSV reports.
 
+- [Read the benchmark results](https://dalto-ai-public.github.io/openweb-benchmark-news/results/) for the 400-question evaluation.
 - [Start here](START.md) for a credential-free example.
 - [Installation and first full run](INSTALL.md) for the question-to-report
   workflow, credentials and resume.
